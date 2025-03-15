@@ -6,9 +6,7 @@ import Image from "next/image";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import { MainNav } from "@/components/main-nav";
 import { MobileNav } from "@/components/mobile-nav";
-
-export const githubURL = "https://github.com/CandleMinecraft";
-export const discordURL = "https://discord.gg/invite/a8Sj3dUcB4";
+import { GITHUB_URL, DISCORD_URL } from "@/lib/constants";
 
 export default function Home() {
   return (
@@ -22,7 +20,7 @@ export default function Home() {
       <nav className="border-b">
         <div className="container max-w-7xl mx-auto flex h-16 items-center px-4">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Image src="/logo128.png" alt="CandleMC Logo" width={32} height={32} className="rounded-sm" />
+            <Image src="/logo512.png" alt="CandleMC Logo" width={32} height={32} className="rounded-sm" />
             <span className="font-bold text-xl">CandleMC</span>
           </Link>
           <MainNav />
@@ -46,10 +44,11 @@ export default function Home() {
             </p>
             <p className="text-xl text-muted-foreground mb-8 max-w-[600px]">
               Fast. Lightweight. Flexible. The next evolution in Minecraft server software.
+              Currently in early development.
             </p>
             <div className="flex gap-4">
               <Button asChild size="lg">
-                <Link href={githubURL}>
+                <Link href={GITHUB_URL}>
                   <svg viewBox="0 0 438.549 438.549" className="mr-2 h-5 w-5">
                     <path
                       fill="currentColor"
@@ -60,7 +59,7 @@ export default function Home() {
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <Link href={discordURL}>
+                <Link href={DISCORD_URL}>
                   <svg className="mr-2 h-5 w-5" viewBox="0 0 24 24">
                     <path
                       fill="currentColor"

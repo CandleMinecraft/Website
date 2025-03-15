@@ -2,7 +2,7 @@
 
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import Link from "next/link";
-import { githubURL, discordURL } from "@/app/page";
+import { GITHUB_URL, DISCORD_URL } from "@/lib/constants";
 
 export function MainNav() {
   return (
@@ -10,14 +10,14 @@ export function MainNav() {
       <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <Link href={githubURL} legacyBehavior passHref>
+            <Link href={GITHUB_URL} legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 GitHub
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href={discordURL} legacyBehavior passHref>
+            <Link href={DISCORD_URL} legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 Discord
               </NavigationMenuLink>

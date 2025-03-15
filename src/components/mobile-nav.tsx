@@ -5,7 +5,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/co
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import Image from "next/image";
-import { githubURL, discordURL } from "@/app/page";
+import { GITHUB_URL, DISCORD_URL } from "@/lib/constants";
 
 export function MobileNav() {
   return (
@@ -19,13 +19,13 @@ export function MobileNav() {
       <SheetContent side="right" className="w-[300px] sm:w-[400px]">
         <SheetHeader>
           <SheetTitle className="flex items-center gap-2">
-            <Image src="/logo128.png" alt="CandleMC Logo" width={24} height={24} className="rounded-sm" />
+            <Image src="/logo512.png" alt="CandleMC Logo" width={24} height={24} className="rounded-sm" />
             <span>Menu</span>
           </SheetTitle>
         </SheetHeader>
         <nav className="mt-8">
           <div className="flex flex-col space-y-3">
-            <Link href={githubURL} className="flex items-center space-x-3 p-2 rounded-lg hover:bg-muted transition-colors">
+            <Link href={GITHUB_URL} className="flex items-center space-x-3 p-2 rounded-lg hover:bg-muted transition-colors">
               <svg viewBox="0 0 438.549 438.549" className="h-5 w-5">
                 <path
                   fill="currentColor"
@@ -34,7 +34,7 @@ export function MobileNav() {
               </svg>
               <span className="font-medium">GitHub</span>
             </Link>
-            <Link href={discordURL} className="flex items-center space-x-3 p-2 rounded-lg hover:bg-muted transition-colors">
+            <Link href={DISCORD_URL} className="flex items-center space-x-3 p-2 rounded-lg hover:bg-muted transition-colors">
               <svg className="h-5 w-5" viewBox="0 0 24 24">
                 <path
                   fill="currentColor"
