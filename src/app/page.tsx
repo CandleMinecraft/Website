@@ -41,9 +41,11 @@ export default function Home() {
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-4">
               CandleMC
             </h1>
+            <p className="text-2xl font-medium text-primary mb-4">
+              Light Up Your Server
+            </p>
             <p className="text-xl text-muted-foreground mb-8 max-w-[600px]">
-              A next-generation Minecraft server software focused on performance and developer experience.
-              Currently in early development.
+              Fast. Lightweight. Flexible. The next evolution in Minecraft server software.
             </p>
             <div className="flex gap-4">
               <Button asChild size="lg">

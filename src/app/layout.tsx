@@ -14,12 +14,12 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://candlemc.net"),
-  title: "CandleMC - Next Generation Minecraft Server",
+  title: "CandleMC - Fast. Lightweight. Flexible.",
   description: "High-performance, flexible Minecraft server software focused on user experience.",
   keywords: ["minecraft", "server", "minecraft server", "performance", "candlemc", "java", "candle"],
   authors: [{ name: "CandleMC Team" }],
   openGraph: {
-    title: "CandleMC - Next Generation Minecraft Server",
+    title: "CandleMC - Fast. Lightweight. Flexible.",
     description: "High-performance, flexible Minecraft server software focused on user experience.",
     url: "https://candlemc.net",
     siteName: "CandleMC",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "CandleMC - Next Generation Minecraft Server",
+    title: "CandleMC - Fast. Lightweight. Flexible.",
     description: "High-performance, flexible Minecraft server software focused on user experience.",
     images: ["/logo512.png"],
   },
