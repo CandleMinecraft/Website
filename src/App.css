@@ -1,0 +1,100 @@
+/* Global resets and typography */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #22252b;
+  color: #fff
+}
+
+/* App container */
+.App {
+  text-align: center;
+}
+
+/* Header styling */
+.App-header {
+  background: linear-gradient(135deg, #2e546d1f, #64275f2d);
+  color: #fff;
+  padding: 60px 20px;
+}
+.App-header h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.App-header p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+.primary-button {
+  background-color: #ff6b6b;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.primary-button:hover {
+  background-color: #ff4757;
+}
+
+/* Content section with cards */
+.App-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+}
+.card {
+  background-color: #4b515e;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  flex: 1 1 300px;
+  max-width: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+.card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+.card p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Footer styling */
+.App-footer {
+  position: sticky;
+  bottom: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  width: 100%;
+}
+/* Disclaimer Card */
+.disclaimer-card {
+  background-color: #92595e; /* Light red/pink background to subtly draw attention */
+  color: #57171d; /* Dark red text */
+  border-left: 5px solid #dc3545; /* Red accent border */
+  padding: 15px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 8px;
+  text-align: center;
+}
+.disclaimer-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+}
+.disclaimer-card p {
+  margin: 0;
+  font-size: 1rem;
+}
