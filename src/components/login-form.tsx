@@ -80,7 +80,23 @@ export function LoginForm({ onSuccess }: LoginFormProps) {
             </div>
 
             {error && (
-              <p className="text-sm text-destructive text-center">{error}</p>
+              <div className="flex items-center justify-center space-x-2 p-2 rounded-md bg-destructive/10 text-destructive animate-in fade-in">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="h-4 w-4"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="12" y1="8" x2="12" y2="12" />
+                  <line x1="12" y1="16" x2="12.01" y2="16" />
+                </svg>
+                <p className="text-sm font-medium">{error}</p>
+              </div>
             )}
 
             <Button type="submit" className="w-full" disabled={isPending}>
@@ -92,7 +108,7 @@ export function LoginForm({ onSuccess }: LoginFormProps) {
                 <span className="w-full border-t" />
               </div>
               <div className="relative flex justify-center text-xs uppercase">
-                <span className="bg-background px-2 text-muted-foreground">
+                <span className="px-2 text-muted-foreground">
                   Checkout our Social Media
                 </span>
               </div>
