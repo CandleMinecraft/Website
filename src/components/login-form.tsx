@@ -99,7 +99,7 @@ export function LoginForm({ onSuccess }: LoginFormProps) {
               </div>
             )}
 
-            <Button type="submit" className="w-full" disabled={isPending}>
+            <Button type="submit" className={`w-full ${isPending ? 'cursor-wait' : 'cursor-pointer'}`} disabled={isPending}>
               {isPending ? "Verifying..." : "Enter Site"}
             </Button>
 
