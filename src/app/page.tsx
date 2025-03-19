@@ -55,7 +55,7 @@ export default function Home() {
           {/* Hero Section */}
           <section className="container max-w-7xl mx-auto px-4 py-24 md:py-32 relative">
             <div className="flex flex-col items-center text-center">
-              <div className="flex items-center gap-8 mb-8">
+              <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8 mb-8">
                 <div className="relative">
                   <Image 
                     src="/logo512.png" 
@@ -232,7 +232,7 @@ export default function Home() {
             <p className="mb-4 text-sm text-muted-foreground">
               CandleMC is not affiliated with Mojang AB. Minecraft is a trademark of Mojang AB.
             </p>
-            <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} CandleMC Team & Contributors. All rights reserved.</p>
+            <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} CandleMC Team. All rights reserved.</p>
           </div>
         </footer>
       </div>
