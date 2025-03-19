@@ -9,12 +9,29 @@ import { ThemeSwitcher } from "@/components/theme-switcher";
 import { MainNav } from "@/components/main-nav";
 import { MobileNav } from "@/components/mobile-nav";
 import { GITHUB_URL, DISCORD_URL } from "@/lib/constants";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const router = useRouter();
+  
+  useEffect(() => {
+    // Check authentication status
+    const checkAuth = () => {
+      // Replace this with your actual auth check logic
+      const isAuthed = sessionStorage.getItem("isAuthenticated") === "true";
+      if (!isAuthed) {
+        router.push("/login");
+      } else {
+        setIsAuthenticated(true);
+      }
+    };
+    
+    checkAuth();
+  }, [router]);
 
   if (!isAuthenticated) {
-    return <LoginForm onSuccess={() => setIsAuthenticated(true)} />;
+    return null; // Return nothing while checking auth
   }
 
   return (
