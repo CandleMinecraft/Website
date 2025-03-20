@@ -6,9 +6,8 @@ import React, { createContext, useContext, useEffect, useState } from 'react';
 type Theme = 'light' | 'dark' | 'system';
 
 interface ThemeContextType {
-    theme: Theme;
+    theme: "light" | "dark";
     setTheme: (theme: Theme) => void;
-    systemTheme: "light" | "dark";
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
@@ -48,7 +47,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     if (!mounted) return null;
 
     return (
-        <ThemeContext.Provider value={{ theme, setTheme, systemTheme }}>
+        <ThemeContext.Provider value={{ theme: theme === "system" ? systemTheme : theme, setTheme }}>
             {children}
         </ThemeContext.Provider>
     );
