@@ -3,6 +3,7 @@
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import { MainNav } from "@/components/main-nav";
 import { MobileNav } from "@/components/mobile-nav";
+import { Footer } from "@/components/ui/footer";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -46,15 +47,7 @@ export function MainLayout({ children }: MainLayoutProps) {
 
         {children}
 
-        {/* Footer */}
-        <footer className="border-t py-12 mt-12 bg-background/50 backdrop-blur-sm">
-          <div className="container max-w-7xl mx-auto px-4 text-center">
-            <p className="mb-4 text-sm text-muted-foreground">
-              CandleMC is not affiliated with Mojang AB. Minecraft is a trademark of Mojang AB.
-            </p>
-            <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} CandleMC Team. All rights reserved.</p>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </div>
   );

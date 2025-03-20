@@ -9,6 +9,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import dynamic from 'next/dynamic';
+import { Footer } from "@/components/ui/footer";
 
 const CookieConsent = dynamic(() => import('@/components/CookieConsent'), {
   ssr: false
@@ -84,14 +85,7 @@ export default function MainLayout({
         {children}
 
         {/* Footer */}
-        <footer className="border-t py-12 mt-12 bg-background/50 backdrop-blur-sm">
-          <div className="container max-w-7xl mx-auto px-4 text-center">
-            <p className="mb-4 text-sm text-muted-foreground">
-              CandleMC is not affiliated with Mojang AB. Minecraft is a trademark of Mojang AB.
-            </p>
-            <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} CandleMC Team. All rights reserved.</p>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </div>
   );
