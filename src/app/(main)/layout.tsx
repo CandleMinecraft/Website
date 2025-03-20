@@ -8,6 +8,11 @@ import { MobileNav } from "@/components/mobile-nav";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
+import dynamic from 'next/dynamic';
+
+const CookieConsent = dynamic(() => import('@/components/CookieConsent'), {
+  ssr: false
+});
 
 export default function MainLayout({
   children,
@@ -69,6 +74,7 @@ export default function MainLayout({
             </Link>
             <MainNav />
             <div className="flex items-center ml-auto space-x-2">
+              <CookieConsent />
               <ThemeSwitcher />
               <MobileNav />
             </div>
