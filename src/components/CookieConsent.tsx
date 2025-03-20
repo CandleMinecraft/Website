@@ -16,11 +16,11 @@ const CookieConsent = () => {
 
   const getDesperateMessage = () => {
     const messages = [
-      "Oh bitte, bitte, BITTE akzeptiere unsere Cookies! 🥺",
-      "Komm schon! Unsere Cookies sind super lecker und TOTAL harmlos! 🍪",
-      "WARUM HASST DU COOKIES SO SEHR?! 😭",
-      "Ich schwöre, diese Cookies sind anders! Sie sind besonders! 🥹",
-      "Weißt du eigentlich, wie viele Stunden ich in diesen Cookie-Dialog gesteckt habe? 😢"
+      "Oh please, please, PLEASE accept our cookies! 🥺",
+      "Come on! Our cookies are super tasty and TOTALLY harmless! 🍪",
+      "WHY DO YOU HATE COOKIES SO MUCH?! 😭",
+      "I swear, these cookies are different! They are special! 🥹",
+      "Do you even know how many hours I spent on this cookie dialog? 😢"
     ];
     return messages[Math.min(clickCount, messages.length - 1)];
   };
@@ -64,8 +64,8 @@ const CookieConsent = () => {
           
           <div className="text-center text-muted-foreground text-sm mb-4">
             {cookieConsent 
-              ? "Juhu! Du magst also doch Cookies! Willst du sie... vielleicht wieder hassen? 👉👈" 
-              : "Ohne Cookies fühle ich mich so... leer. Bitte hilf mir! 🥺"}
+              ? "Yay! So you do like cookies! Do you... maybe want to hate them again? 👉👈" 
+              : "Without cookies, I feel so... empty. Please help me! 🥺"}
           </div>
 
           <div className="flex flex-col gap-2">
@@ -88,7 +88,7 @@ const CookieConsent = () => {
                   <Cookie className="h-4 w-4" />
                 )}
               </span>
-              {cookieConsent ? "Cookies verbieten" : "Cookies erlauben"}
+              {cookieConsent ? "Prohibit cookies" : "Allow cookies"}
             </Button>
             <Button
               onClick={() => {
@@ -101,8 +101,8 @@ const CookieConsent = () => {
               className="w-full"
             >
               {cookieConsent 
-                ? "Nein, ich liebe Cookies!" 
-                : "Nein, ich hasse Cookies!"}
+                ? "No, I love cookies!" 
+                : "No, I hate cookies!"}
             </Button>
           </div>
         </DialogContent>
